@@ -1,0 +1,29 @@
+{
+  "cSpell.words": [
+    "Auctropin",
+    "cloudinary",
+    "Contentlayout",
+    "dmnhjucwu",
+    "flowbite",
+    "hammerandbell",
+    "headlessui",
+    "menutitle",
+    "Pivotaltracker",
+    "productsimages",
+    "pwimage",
+    "reduxjs",
+    "Swal",
+    "synto",
+    "unshow",
+    "Zipcode"
+  ],
+  "task.allowAutomaticTasks": true,
+  "debug.openDebug": "neverOpen",
+  "terminal.integrated.inheritEnv": false,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
+}

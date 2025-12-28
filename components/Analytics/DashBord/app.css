@@ -1,0 +1,16 @@
+/* Add this to your CSS file */
+.scroll-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  cursor: grab;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+.table-wrapper {
+  display: inline-block;
+  min-width: 100%;
+}

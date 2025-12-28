@@ -1,0 +1,101 @@
+/*--------------------------------------------------
+  Background Image Styles (Next.js Compatible)
+--------------------------------------------------*/
+
+/* Background image mapping */
+[bg-img="bgimg1"] .app-sidebar {
+  background-image: url("/assets/img/menu-bg-images/bg-img1.jpg");
+}
+
+[bg-img="bgimg2"] .app-sidebar {
+  background-image: url("/assets/img/menu-bg-images/bg-img2.jpg");
+}
+
+[bg-img="bgimg3"] .app-sidebar {
+  background-image: url("/assets/img/menu-bg-images/bg-img3.jpg");
+}
+
+[bg-img="bgimg4"] .app-sidebar {
+  background-image: url("/assets/img/menu-bg-images/bg-img4.jpg");
+}
+
+[bg-img="bgimg5"] .app-sidebar {
+  background-image: url("/assets/img/menu-bg-images/bg-img5.jpg");
+}
+
+/* Common sidebar background behavior */
+[bg-img] {
+  .app-sidebar {
+    @apply bg-cover bg-center bg-no-repeat relative;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+  }
+
+  /* Header transparent over background */
+  .main-sidebar-header {
+    @apply bg-transparent;
+  }
+
+  /* Menu style overlays */
+  &[data-menu-styles="light"] {
+    .app-sidebar::before {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &[data-menu-styles="dark"] {
+    .app-sidebar::before {
+      background-color: rgba(15, 23, 42, 0.8); // bgdark
+    }
+  }
+
+  &[data-menu-styles="color"] {
+    .app-sidebar::before {
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      rgba(99, 102, 241, 0.8); // primary
+    }
+  }
+
+  &[data-menu-styles="gradient"] {
+    .app-sidebar::before {
+      background: linear-gradient(
+        to bottom,
+        rgba(99, 102, 241, 0.8),
+        rgba(14, 165, 233, 0.8)
+      );
+    }
+
+    .app-sidebar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      );
+    }
+  }
+
+  &[data-menu-styles="transparent"] {
+    .app-sidebar::before {
+      background-color: rgba(248, 250, 252, 0.8); // bodybg
+    }
+  }
+}
+
+/*--------------------------------------------------
+  End Background Image Styles
+--------------------------------------------------*/
