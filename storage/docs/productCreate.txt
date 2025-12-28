@@ -1,0 +1,28 @@
+isGeneral then hide:
+	Product includes hide
+	Product Cycle Length hide
+	Subtitle hide
+	Bundle Size hide
+	Select Product for Bundle hide
+
+IsBundle then hide:
+	Product includes hide
+	Product Cycle Length hide
+	
+Show:
+	Subtitle show
+	Bundle Size show
+	Select Product for Bundle show
+
+IsCycle then hide:
+	Subtitle hide
+	Bundle Size hide
+	Select Product for Bundle hide
+	Effective Time
+	Benefits 
+	Dose
+Show:
+	Product includes hide
+	Product Cycle Length hide
+
+

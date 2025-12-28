@@ -1,0 +1,62 @@
+/* ------------------------------
+   IMPORT RAW CSS (public)
+-------------------------------- */
+// @import url("./scss/style.scss");
+
+/* ------------------------------
+   ICON FONTS (public path only)
+-------------------------------- */
+@font-face {
+  font-family: "remixicon";
+  src: url("/assets/iconfonts/RemixIcons/fonts/remixicon.woff2") format("woff2"),
+       url("/assets/iconfonts/RemixIcons/fonts/remixicon.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "tabler-icons";
+  src: url("/assets/iconfonts/tabler-icons/webfont/fonts/tabler-icons.woff2") format("woff2"),
+       url("/assets/iconfonts/tabler-icons/webfont/fonts/tabler-icons.woff") format("woff");
+  font-display: swap;
+}
+
+/* ------------------------------
+   GLOBAL RESET (important)
+-------------------------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------
+   ANIMATIONS
+-------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeIn { animation: fadeIn .3s ease-in-out; }
+.animate-slideInLeft { animation: slideInLeft .3s ease-in-out; }
+.animate-slideInRight { animation: slideInRight .3s ease-in-out; }
+
+/* ------------------------------
+   ACCESSIBILITY
+-------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,187 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+//form-switch
+#statistics {
+  @apply bg-[url("../public/assets/img/landing/1.jpg")];
+}
+
+.theme-container {
+  @apply ms-[9rem] #{!important};
+}
+
+.theme-container1 {
+  @apply me-[9rem];
+}
+
+//form-layouts
+.react-datepicker__calendar-icon {
+  @apply fill-[#64748b] mt-1;
+}
+
+//customized styles
+.upcoming-list,
+.crypto-trans,
+.traders-list,
+.vistors-list,
+.instructors-list {
+  li:last-child {
+    @apply mb-0 #{!important};
+  }
+}
+
+.customer-list,
+.popular-blog-list {
+  li:last-child {
+    @apply pb-0 #{!important};
+  }
+}
+
+.billing-search .react-select__control {
+  @apply min-h-[44px] #{!important};
+}
+
+.react-datepicker__calendar-icon {
+  @apply hidden;
+}
+
+.ti-form-invalid {
+  .react-select__control {
+    @apply border-red-500 #{!important};
+  }
+}
+
+.ti-form-valid {
+  .react-select__control {
+    @apply border-green-500 #{!important};
+  }
+}
+
+#range-slider-ab .range-slider__thumb[data-lower] {
+  @apply bg-red-500 bg-none #{!important};
+}
+
+#range-slider-ab .range-slider__thumb[data-upper] {
+  @apply bg-red-500 bg-none #{!important};
+}
+
+.rangeslider-two-thumb {
+  .rangeslider-thumb div div:first-child {
+    @apply -top-[34px] #{!important};
+  }
+}
+
+.react-dropdown-select {
+  @apply rounded-sm #{!important};
+}
+
+.react-dropdown-select-option-remove:hover {
+  @apply text-white #{!important};
+}
+
+.react-dropdown-select-option {
+  @apply rounded-[20px] #{!important};
+}
+
+.ProductTag {
+  .rti--container {
+    @apply p-0 border-0 #{!important};
+  }
+}
+
+//editproducts
+.product-search {
+  .css-13cymwt-control {
+    @apply bg-white border-gray-200 dark:bg-bgdark dark:border-white/10 rounded-sm #{!important};
+  }
+
+  .css-1u9des2-indicatorSeparator {
+    @apply bg-gray-200 dark:bg-white/10 hidden #{!important};
+  }
+
+  .css-1xc3v61-indicatorContainer {
+    @apply text-gray-200 dark:text-white/10 #{!important};
+  }
+
+  .css-1fdsijx-ValueContainer {
+    @apply p-2 #{!important};
+  }
+
+  .css-t3ipsp-control:hover {
+    @apply border-gray-200 dark:border-white/10 #{!important};
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  @apply appearance-none;
+}
+
+@media (min-width: 992px) {
+  [data-nav-layout="horizontal"] {
+
+    &[data-nav-style="icon-click"][toggled="icon-click-closed"],
+    &[data-nav-style="icon-hover"][toggled="icon-hover-closed"] {
+      .app-sidebar .slide.has-sub .slide-menu.child1 {
+        @apply top-[2.65rem] #{!important};
+      }
+    }
+  }
+}
+
+//gradient menu
+[data-menu-styles=gradient] .app-sidebar:before {
+  @apply bottom-0 left-0 -z-[1];
+}
+
+//form-switch
+.ti-switch:before {
+  content: var(--tw-content);
+}
+
+@media (min-width: 991.98px) {
+  [data-nav-layout="horizontal"][data-nav-style="menu-hover"][data-width="boxed"] {
+    .main-menu-container {
+      @apply overflow-hidden w-full;
+    }
+  }
+}
+
+.firebase-data {
+  @apply rounded-md bg-bodybg p-[7px] ms-[125px] w-[27%];
+}
+
+.hs-overlay-backdrop {
+  @apply z-50;
+}
+
+#currency-select {
+  .react-select__control {
+    @apply border-0 #{!important};
+  }
+}
+.react-select__input-container{
+  @apply dark:text-white;
+}
+[dir = "rtl"] {
+  .MuiSvgIcon-root{
+    @apply rotate-180;
+  }
+}
